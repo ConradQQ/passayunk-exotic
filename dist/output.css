@@ -607,16 +607,28 @@ video {
   display: flex;
 }
 
+.h-3\/4 {
+  height: 75%;
+}
+
 .h-1\/2 {
   height: 50%;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .h-6 {
   height: 1.5rem;
 }
 
-.w-1\/2 {
-  width: 50%;
+.w-full {
+  width: 100%;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .w-fit {
@@ -625,16 +637,12 @@ video {
   width: fit-content;
 }
 
-.w-6\/12 {
-  width: 50%;
-}
-
 .w-1\/4 {
   width: 25%;
 }
 
-.w-full {
-  width: 100%;
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .flex-row {
@@ -693,12 +701,24 @@ video {
   overflow: hidden;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .bg-yellow-600 {
@@ -720,12 +740,20 @@ video {
   padding: 1.5rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-12 {
   padding: 3rem;
 }
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .px-10 {
@@ -757,13 +785,18 @@ video {
   line-height: 2rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-\[14px\] {
   font-size: 14px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-white {
@@ -811,8 +844,8 @@ a {
 }
 
 img {
-  width: 35vw;
-  height: 45vh;
+  width: 45vw;
+  height: 55vh;
   border-radius: 5px;
 }
 
@@ -929,6 +962,18 @@ p {
 }
 
 @media (min-width: 768px) {
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-5\/6 {
+    width: 83.333333%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
