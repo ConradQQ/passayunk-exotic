@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/dist/output.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet"> 
+</head>
+<body class="bg-yellow-600 flex flex-col space-y-10">
+<header class="flex flex-col purp text-center container-lg space-y-5 p-6">
+  <div class="space-y-5">
+  <h1 class="text-4xl underline">PASSYUNK EXOTIC ANIMAL CARE</h1>
+  <h2 class="text-2xl mx-auto">Exotic Pet Boardings & Drop-ins - South Philadelphia</h2>
+  <nav class="flex flex-row justify-center space-x-5">
+    <a class="hover:text-white" href="#pricing">Pricing</a>
+    <a class="hover:text-white" href="#about">About Us</a>
+    <a class="hover:text-white" href="#contact">Contact</a>
+    <a class="hover:text-white" href="./book-form.html" target="_blank">Book Now</a>
+  </nav>
+  </div>
+</header>
+<!-- Billboard Section -->
+<section id="billboard" class="container-lg w-1/2 h-1/2 bg-black mx-auto rounded-xl p-12 flex flex-col justify-center space-y-5">
+  <div class="purp text-center rounded-lg w-fit mx-auto">
+    <h1 class="text-2xl md:text-3xl">PASSYUNK EXOTIC ANIMAL CARE</h1>
+  </div>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="./imgs/anastasia-mezenina-7DGdHT5LTl0-unsplash.jpg" >
+  </div>
+  <div class="mySlides fade">
+    <img src="./imgs/hendrik-schlott-Suo6-mjTw6M-unsplash.jpg" >
+  </div>
+  <div class="mySlides fade">
+    <img src="./imgs/ursula-gamez-uQ1Xg4dT07I-unsplash.jpg" >
+  </div>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+</section>
+
+<!-- Animals Section -->
+<section class="mx-auto space-y-3 justify-center container-lg flex flex-col w-fit h-1/2 rounded-xl px-10 py-5 text-center bg-black md:flex-row md:space-x-5 md: my-auto">
+<div class="flex flex-col md:pt-3">
+  <h2 class="purp-text underline md:text-2xl">REPTILES</h2>
+  <ol>
+    <li>Snakes</li>
+    <li>Lizards</li>
+    <li>Turtles</li>
+    <li>Tortoises</li>
+  </ol>
+</div>
+<div class="flex flex-col text-center">
+  <h2 class="purp-text underline md:text-2xl">BIRDS</h2>
+  <ol>
+    <li>Parrots</li>
+    <li>Songbirds</li>
+    <li>Gamebirds</li>
+    <li>Fowl</li>
+  </ol>
+</div>
+<div class="flex flex-col text-center">
+  <h2 class="purp-text underline md:text-2xl">RODENTS</h2>
+  <ol class="text-center">
+    <li>Rabbits</li>
+    <li>Hamsters</li>
+    <li>Guinea Pigs</li>
+    <li>Mice</li>
+    <li>Rats</li>
+  </ol>
+</div>
+<div class="flex flex-col text-center">
+  <h2 class="purp-text underline md:text-2xl">MAMMALS</h2>
+  <ol class="text-center">
+    <li>Ferrets</li>
+    <li>Foxes</li>
+    <li>Red Pandas</li>
+  </ol>
+</div>
+<div class="flex flex-col text-center">
+  <h2 class="purp-text underline md:text-2xl">FISH</h2>
+  <ol class="text-center">
+    <li>Saltwater</li>
+    <li>Freshwater</li>
+    <li>Tanks</li>
+    <li>Koi Ponds</li>
+  </ol>
+</div>
+<div class="flex flex-col text-center">
+  <h2 class="purp-text underline md:text-2xl">OTHER</h2>
+  <ol class="text-center">
+    <li>Insects</li>
+    <li>Arachnids</li>
+  </ol>
+</div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="container-lg flex flex-col mx-auto text-center space-y-7 p-5 bg-black rounded-lg w-6/12 h-1/2 justify-center">
+
+  <div class="">
+    <h1 class="underline purp-text text-3xl">PRICING</h1>
+  </div>
+
+  <!-- Pricing -->
+  <div class="flex flex-col justify-around space-y-5 text-center md:space-y-0 md:flex-row">
+    <div class="flex flex-col text-center">
+      <h2 class="underline blue-text mb-5 text-2xl">BOARDING</h2>
+      <ol>
+        <li class="text-white">$35/night up to 7 nights</li>
+        <li class="text-white">$25/night after 7th night</li>
+      </ol>
+    </div>
+
+    <div class="flex flex-col text-center">
+      <h2 class="underline blue-text mb-5 text-2xl">DROP-INs</h2>
+      <ol>
+        <li class="text-white">$25/drop-in</li>
+        <li class="text-white">$20/drop-in for additional pet</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Book Now Section -->
+  
+    <button class="bg-purple-700 hover:text-white w-1/4 mx-auto rounded-lg hover:bg-sky-400 md:px-5 md:rounded-full" onclick="window.location.href='./book-form.html';">Book Now</button>
+  
+    
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="flex flex-col mx-auto space-y-5 p-5 bg-black rounded-xl justify-center w-6/12 h-1/2">
+  <div class="text-center mx-auto">
+    <h1 class="underline purp-text text-3xl">ABOUT US</h1>
+  </div>
+  <div class="text-center mx-auto">
+    <p>
+      My wife and myself we have over 20 years of combined experience caring for exotic animals. We have cared for all sorts of reptiles, birds, rodents, as well as mammals and fish. We have had many exotics as pets ourselves over the years, and whatever species we haven't had our family members probably have. You would be hard pressed to bring us an exotic we didn't at least have some modicum of experience with.
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-black p-5 rounded-lg flex flex-col justify-center mx-auto w-6/12 h-1/2 space-y-3">
+  <div class="mx-auto space-y-3">
+    <h1 class="purp-text text-3xl">Have a question?</h1>
+  </div>
+  <div class="flex flex-col mx-auto space-y-2 justify-center">
+    <a class="hover:text-white" href="mailto:connorhawkes@gmail.com?subject=Exotic animal=Message%20Goes%20Here">connorhawkes@gmail.com</a>
+  </div>
+  <div class="flex flex-col mx-auto space-y-2 justify-center text-center">
+    <p class="text-[14px]">Please include <span class="purp-text ">"Exotic Animal"</span> in the subject line and either myself or my wife will get back with you within 24 hours</p>
+  </div>
+  
+</section>
+<!-- Footer -->
+<footer class="bg-black w-full h-6 flex flex-row justify-center">
+  <div class="flex flex-row mx-auto text-white">
+    <p><span>&copy;</span> 2022 Passyunk Exotic Animal Care - All Rights Reserved</p>
+  </div>
+</footer>
+<script src="./script.js"></script>
+</body>
+</html>
