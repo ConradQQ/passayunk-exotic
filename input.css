@@ -32,6 +32,11 @@ h1, h2, a {
  font-weight: 800;
 }
 
+p {
+ color:#fff;
+ font-size: 12px;
+}
+
 a {
  color: #7067CF;
 }
@@ -47,10 +52,8 @@ button:hover {
  color: black;
 }
 
-p {
- color:#fff;
- font-size: 12px;
-}
+
+
 
 
 

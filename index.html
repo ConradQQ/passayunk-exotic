@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet"> 
 </head>
 <body class="bg-yellow-600">
-<header class="flex flex-col purp text-center container-lg space-y-5 p-2">
+<header class="flex flex-col purp text-center container-lg space-y-5 p-2 sticky">
   <div class="space-y-5 p-2">
   <h1 class="text-4xl underline p-2">PASSYUNK EXOTIC ANIMAL CARE</h1>
   <h2 class="text-2xl mx-auto">Exotic Pet Boardings & Drop-ins - South Philadelphia</h2>
@@ -16,8 +16,11 @@
     <a class="hover:text-white" href="#pricing">Pricing</a>
     <a class="hover:text-white" href="#about">About</a>
     <a class="hover:text-white" href="#contact">Contact</a>
-    <a class="hover:text-white" href="./book-form.html" target="_blank">Book Now</a>
+    
   </nav>
+  <div id="book-now" class="">
+    <a class="hover:text-white p-2 bg-orange-300 rounded-sm bouncein" href="./book-form.html" target="_blank">Book Now</a>
+  </div>
   </div>
 </header>
 
@@ -29,13 +32,13 @@
 <!-- Slideshow container -->
 <div class="slideshow-container w-full">
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade w-full">
+  <div class="mySlides fade w-full lg:w-3/4">
     <img src="./imgs/anastasia-mezenina-7DGdHT5LTl0-unsplash.jpg" class="w-full" >
   </div>
-  <div class="mySlides fade w-full">
+  <div class="mySlides fade w-full lg:w-3/4">
     <img src="./imgs/hendrik-schlott-Suo6-mjTw6M-unsplash.jpg" class="w-full" >
   </div>
-  <div class="mySlides fade w-full">
+  <div class="mySlides fade w-full lg:w-3/4">
     <img src="./imgs/ursula-gamez-uQ1Xg4dT07I-unsplash.jpg" 
     class="w-full">
   </div>
@@ -176,5 +179,24 @@
   </div>
 </footer>
 <script src="./script.js"></script>
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+</script>
+
+<script>
+  $(function() {
+      $(".bouncein").mouseenter(
+        function() {
+          $(this).animate({marginTop: "80px"}, 1500)
+                 .animate({marginTop: "40px"});
+
+        }
+      )
+  });
+
+
+</script>
 </body>
 </html>

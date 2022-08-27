@@ -8,8 +8,34 @@
  <link href="/dist/output.css" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> 
  <link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet"> 
+
+ <!-- EmailJS -->
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('AVTOIQBTPlIqKEEmr');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_f1ke6qe', 'template_0miadqn', this)
+                    .then(function() {
+                        alert('Booking request succesfully submitted! We will be in contact within 24 hours, thank you for your interest!');
+                    }, function(error) {
+                        alert('Something went wrong... Please try again', error);
+                    });
+            });
+        }
+    </script>
 </head>
-<body class="bg-yellow-600 flex flex-col space-y-10 overflow-x-hidden">
+<body class="relative bg-yellow-600 flex flex-col space-y-10 overflow-x-hidden">
  <!-- Header -->
  <header class="flex flex-col purp text-center container-lg space-y-5 p-6 w-full">
   <div class="space-y-5">
@@ -17,15 +43,36 @@
   <nav class="flex flex-row justify-center space-x-5">
     <a class="hover:text-white" href="./index.html">Home</a>
     <a class="hover:text-white" href="./#pricing">Pricing</a>
-    <a class="hover:text-white" href="./about">About Us</a>
-    <a class="hover:text-white" href="./contact">Contact</a>
-    <a class="hover:text-white" href="./book-form.html" target="_blank">Book Now</a>
+    <a class="hover:text-white" href="./#about">About Us</a>
+    <a class="hover:text-white" href="./#contact">Contact</a>
   </nav>
   </div>
 </header>
 <!-- Main Content -->
-<main class="flex flex-col justify-center md:container-lg">
-
+<h1 class="purp-text text-4xl pl-5">Send a booking request</h1>
+<main class="p-10">
+<div class="purp w-1/2 h-5/6 p-3 rounded-lg">
+  <form id="contact-form" class="flex flex-col w-1/2 space-y-2 mx-auto">
+    <input class="rounded-sm" type="hidden" name="contact_number">
+    <label class="text-white">Name</label>
+    <input class="rounded-sm" type="text" name="user_name" placeholder="First Name">
+    <label class="text-white">Email</label>
+    <input class="rounded-sm" type="email" name="user_email" placeholder="Email Address">
+    <label class="text-white">Phone Number</label>
+    <input class="rounded-sm" type="tel" name="user_number" placeholder="555-555-5555">
+    <label class="text-white">Care start date</label>
+    <input class="rounded-sm" type="date" name="start_date">
+    <label class="text-white">Care end date</label>
+    <input class="rounded-sm" type="date" name="end_date">
+    <label class="text-white">Pet Type</label>
+    <input class="rounded-sm" type="text" name="pet_type" placeholder="Reptile, bird, fish etc.,.">
+    <label class="text-white">Pet Species</label>
+    <input class="rounded-sm" type="text" name="pet_species" placeholder="Gecko, Parrot, etc.,.">
+    <label class="text-white">Message</label>
+    <textarea class="rounded-sm w-full p-3" Sname="message" placeholder="Pet Info"></textarea>
+    <input class="mx-auto p-2 w-1/2 cursor-pointer rounded-xl bg-red-500" type="submit" value="Send">
+  </form>
+</div>
 </main>
 </body>
 </html>
