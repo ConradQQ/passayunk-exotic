@@ -6,6 +6,31 @@
 <link href="/dist/output.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css2?family=Sarala&display=swap" rel="stylesheet"> 
+
+<!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('AVTOIQBTPlIqKEEmr');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_f1ke6qe', 'template_5u14hlb', this)
+                    .then(function() {
+                        alert('Success! We will be in touch within 24 hours.');
+                    }, function(error) {
+                        alert('Something went wrong... Please try again', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body class="bg-yellow-600">
 <header class="flex flex-col purp text-center container-lg space-y-5 p-2 sticky">
@@ -25,7 +50,7 @@
 </header>
 
 <main class="p-3 flex flex-col space-y-10">
-<section id="billboard" class="container-lg w-fullh-3/4 bg-black mx-auto rounded-xl p-12 flex flex-col justify-center space-y-5 md:w-5/6">
+<section id="billboard" class="container-lg w-3/4 h-3/4 bg-black mx-auto rounded-xl p-12 flex flex-col justify-center space-y-5 md:w-1/2">
   <div class="purp text-center rounded-lg w-fit mx-auto">
     <h1 class="text-2xl md:text-3xl">PASSYUNK EXOTIC ANIMAL CARE</h1>
   </div>
@@ -56,7 +81,8 @@
 </section>
 
 <!-- Animals Section -->
-<section class="mx-auto space-y-3 justify-center container-lg flex flex-col w-full h-1/2 rounded-xl px-10 py-5 text-center bg-black md:flex-row md:space-x-5 md:my-auto md:w-3/4">
+<section class="mx-auto space-y-3 justify-center container-lg flex flex-col w-full h-1/2 rounded-xl px-10 py-5 text-center bg-black md:flex-row md:space-x-28 md:my-auto md:w-3/4 ">
+  
 <div class="flex flex-col md:pt-3">
   <h2 class="purp-text underline md:text-2xl">REPTILES</h2>
   <ol>
@@ -157,16 +183,16 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="bg-black p-5 rounded-lg flex flex-col justify-center mx-auto w-5/6 h-3/4 space-y-3 overflow-hidden md:w-1/3">
-  <div class="mx-auto space-y-3">
-    <h1 class="purp-text text-3xl">Have a question?</h1>
+<section id="contact" class="bg-black p-5 rounded-lg flex flex-col justify-center mx-auto w-5/6 h-full space-y-3 overflow-hidden md:w-1/3">
+  <div class="mx-auto space-y-3 text-center">
+    <h1 class="purp-text text-xl">Have a general question?</h1>
+    <h2 class="blue-text text-md">Send us a message directly!</h2>
   </div>
-  <div class="flex flex-col mx-auto space-y-2 justify-center">
-    <a class="hover:text-white" href="mailto:connorhawkes@gmail.com?subject=Exotic-animal">passyunkexoticanimalcare@gmail.com</a>
-  </div>
-  <div class="flex flex-col mx-auto space-y-2 justify-center text-center">
-    <p class="text-[14px]">Please include <span class="purp-text">"Exotic Animal"</span> in the subject line and either myself or my wife will get back with you within 24 hours</p>
-  </div>
+  <form id="contact-form" class="flex flex-col space-y-3">
+    <input class="rounded-sm" type="hidden" name="contact_number">
+    <input class="rounded-sm p-3" type="textarea" name="message" placeholder="Type message here">
+    <input class="mx-auto p-2 w-1/6 cursor-pointer rounded-xl bg-orange-300 hover:text-white" type="submit" value="Send">
+  </form>
   
 </section>
 
