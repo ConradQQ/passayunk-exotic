@@ -49,9 +49,10 @@
   </div>
 </header>
 <!-- Main Content -->
-<h1 class="purp-text text-4xl pl-5">Send a booking request</h1>
+<h1 class="purp-text text-4xl pl-5 ">Send a booking request</h1>
 <main class="p-10">
 <div class="purp w-1/2 h-5/6 p-3 rounded-lg">
+  <h1 class="text-white"></h1>
   <form id="contact-form" class="flex flex-col w-1/2 space-y-2 mx-auto">
     <input class="rounded-sm" type="hidden" name="contact_number">
     <label class="text-white">Name</label>
@@ -64,13 +65,11 @@
     <input class="rounded-sm" type="date" name="start_date">
     <label class="text-white">Care end date</label>
     <input class="rounded-sm" type="date" name="end_date">
-    <label class="text-white">Pet Type</label>
-    <input class="rounded-sm" type="text" name="pet_type" placeholder="Reptile, bird, fish etc.,.">
     <label class="text-white">Pet Species</label>
     <input class="rounded-sm" type="text" name="pet_species" placeholder="Gecko, Parrot, etc.,.">
     <label class="text-white">Message</label>
     <textarea class="rounded-sm w-full p-3" Sname="message" placeholder="Pet Info"></textarea>
-    <input class="mx-auto p-2 w-1/2 cursor-pointer rounded-xl bg-red-500" type="submit" value="Send">
+    <input class="mx-auto p-2 w-1/2 cursor-pointer rounded-xl bg-orange-300 hover:text-white hover:border-red-400" type="submit" value="Send">
   </form>
 </div>
 </main>
