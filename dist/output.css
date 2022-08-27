@@ -1067,6 +1067,14 @@ button:hover {
     width: 83.333333%;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
