@@ -22,7 +22,7 @@
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                emailjs.sendForm('service_f1ke6qe', 'template_5u14hlb', this)
+                emailjs.sendForm('service_f1ke6qe', 'template_0miadqn', this)
                     .then(function() {
                         alert('Success! We will be in touch within 24 hours.');
                     }, function(error) {
@@ -82,12 +82,15 @@
 
 <!-- Animals Section -->
 <section class="mx-auto space-y-3 justify-center container-lg flex flex-col w-full h-1/2 rounded-xl px-10 py-5 text-center bg-black md:flex-row md:space-x-10 md:my-auto md:w-fit lg:space-x-28">
-  sticky
+  <div class="flex flex-col text-center">
+  <h2 class="purp-text underline md:text-2xl">REPTILES</h2>
+  <ol>
     <li>Snakes</li>
     <li>Lizards</li>
     <li>Turtles</li>
     <li>Tortoises</li>
   </ol>
+</div>
 </div>
 <div class="flex flex-col text-center">
   <h2 class="purp-text underline md:text-2xl">BIRDS</h2>
